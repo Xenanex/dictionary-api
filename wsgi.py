@@ -13,7 +13,8 @@ dictionnary.load(url="https://raw.githubusercontent.com/dwyl/english-words/maste
 
 @app.route('/', methods=['GET'])
 def user_help():
-    return "Give a word to test in the URL"
+    return """To test a word use : base_url/:word</br>
+To autocomplete a word use: base_url/autocomplete/:word"""
 
 @app.route('/autocomplete/<string:start_with>', methods=['GET'])
 def autocomplete(start_with):
